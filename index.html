@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <script src="preloadDatas.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <h2>sim</h2>
+    </header>
+    <nav name="section" id="sections">
+        <ul>
+            <li>
+                <a href="#" onclick="toggleDropdown(event)">Sections</a>
+                <ul class="dropdown">
+                    <li>
+                        <a href="#" >ITMAWD</a>
+                        <ul class="dropdowninadropdown">
+                            <li><a href="#" onclick="updateSchedule('ICTE101A')">ICTE101A</a></li>
+                            <li><a href="#" onclick="updateSchedule('ICTE102A')">ICTE102A</a></li>
+                            <li><a href="#" onclick="updateSchedule('ICTE201P')">ICTE201P</a></li>
+                            <li><a href="#" onclick="updateSchedule('ICTE202P')">ICTE202P</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">HUMMS</a>
+                        <ul class="dropdowninadropdown">
+                            <li><a href="#" onclick="updateSchedule('HUMS201A')">HUMS201A</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ABM</a>
+                        <ul class="dropdowninadropdown">
+                            <li><a href="#" onclick="updateSchedule('ABMT101A')">ABMT101A</a></li>
+                            <li><a href="#" onclick="updateSchedule('ABMT201A')">ABMT201A</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">CART</a>
+                        <ul class="dropdowninadropdown">
+                            <li><a href="#" onclick="updateSchedule('CART101A')">CART101A</a></li>
+                            <li><a href="#" onclick="updateSchedule('CART201A')">CART201A</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">TOPE</a>
+                        <ul class="dropdowninadropdown">
+                            <li><a href="#" onclick="updateSchedule('TOPE101A')">TOPE101A</a></li>
+                            <li><a href="#" onclick="updateSchedule('TOPE201A')">TOPE201A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>  
+<dialog id="showDetails" onclick="closeDialog()">
+    <h2>This is a dialog showing thingamajing</h2>
+</dialog>
+    
+<div class="floorList">
+    <div name="1stFloor" class="slidesDisp fade" >
+    <img src="Floors/Floor1.png" usemap="#floor1">
+    <map name="floor1">
+        <area target="" alt="comlab3" title="comlab3" onclick="showRoomDetails( 'comlab3')" coords="5,410,6,244,39,243,42,136,167,137,168,410" shape="poly">
+        <area target="" alt="comlab2" title="comlab2" onclick="showRoomDetails( 'comlab2')" coords="170,137,348,412" shape="rect">
+        <area target="" alt="comlab1" title="comlab1" onclick="showRoomDetails( 'comlab1')" coords="348,274,566,413" shape="rect">
+        <area target="" alt="faculty" title="faculty" onclick="miscOnclick( 'faculty1stfloor')" coords="348,135,568,274" shape="rect">
+        <area target="" alt="AdminsOffice" title="AdminsOffice" onclick="miscOnclick( 'adminsOffice')" coords="678,164,678,222,654,226,654,299,809,297,808,164" shape="poly">
+        <area target="" alt="kitchen" title="kitchen" onclick="miscOnclick( 'kitchen')" coords="713,105,716,160,810,159,809,327,958,327,958,72,812,70,810,108" shape="poly">
+        <area target="" alt="FrontDesk" title="FrontDesk" onclick="miscOnclick( 'frontDesk')" coords="654,299,653,352,696,333,742,328,778,332,808,342,810,298" shape="poly">
+        <area target="" alt="bar" title="bar" onclick="miscOnclick( 'bar')" coords="813,329,960,411" shape="rect">
+    </map>    
+    <div class="comlab3">
+        <h3>Computer Lab 3</h3>
+    </div>
+    <div class="comlab3Part2"></div>
+    <div class="comlab2">
+        <h3>Computer Lab 2</h3>
+    </div>
+    <div class="comlab1">
+        <h3>Computer Lab 1</h3>
+    </div>
+    <div class="facultyfloor1">
+        <h3>faculty</h3>
+    </div>
+    <div class="adminsOffice">
+        <h3>Admins Office</h3>
+    </div>
+    <div class="frontDesk">
+        <h3>Front Desk</h3>
+    </div>
+    <div class="kitchen">
+        <h3>kitchen</h3>
+    </div>
+    <div class="tago"></div>
+    <div class="bar">
+        <h3>Bar</h3>
+    </div>
+    
+</div>
+
+<div name="2ndFloor" class="slidesDisp fade">
+    <map name="floor2">
+        <area target="" alt="205" title="205" onclick="showRoomDetails( 'room205')" coords="171,3,172,206,338,205,339,132,298,132,298,71,339,72,339,4" shape="poly">
+        <area target="" alt="Clinic" title="Clinic" onclick="miscOnclick( 'clinic')" coords="297,72,298,131,339,129,341,143,503,144,502,83,340,86,337,71" shape="poly">
+        <area target="" alt="204" title="204" onclick="showRoomDetails( 'room204')" coords="172,208,339,419" shape="rect">
+        <area target="" alt="201" title="201" onclick="showRoomDetails( 'room203')" coords="341,237,504,418" shape="rect">
+        <area target="" alt="202" title="202" onclick="showRoomDetails( 'room202')" coords="506,237,506,419,670,418,665,237" shape="poly">
+        <area target="" alt="203" title="203" onclick="showRoomDetails( 'room201')" coords="667,237,673,419,828,419,828,237" shape="poly">
+        <area target="" alt="DeansOffice" title="DeansOffice" onclick="miscOnclick( 'deansOffice')" coords="828,351,828,415,963,415,963,326,884,328,888,353" shape="poly">
+        <area target="" alt="Faculty" title="Faculty" onclick="miscOnclick( 'faculty2ndfloor')" coords="828,5,828,349,884,349,882,326,965,324,963,5" shape="poly">
+        <area target="" alt="Guidance" title="Guidance" onclick="miscOnclick( 'guidance')" coords="341,2,504,82" shape="rect">
+        <area target="" alt="Bookstore" title="Bookstore" onclick="miscOnclick( 'bookstore')" coords="339,144,339,171,405,171,407,194,502,194,502,144" shape="poly">
+        <area target="" alt="Library" title="Library" onclick="miscOnclick( 'library')" coords="4,4,169,419" shape="rect">
+    </map>
+    <img class="imageSlide" src="Floors/Floor2.png" usemap="#floor2">
+    <div class="room203">
+        <h3>Room 203</h3>
+    </div>
+    <div class="room202">
+        <h3>Room 202</h3>
+    </div>
+    <div class="room201">
+        <h3>Room 201</h3>
+    </div>
+    <div class="room204">
+        <h3>Room 204</h3>
+    </div>
+    <div class="room205">
+    </div>
+    <div class="room205Part2">
+        <h3>Room 205</h3>
+    </div>
+    <div class="room205Part3"></div>
+    <div class="guidance">
+        <h3>Guidance Room</h3>
+    </div>
+    <div class="clinic">
+    </div>
+    <div class="clinic2">
+        <h3>Clinic</h3>
+    </div>
+    <div class="clinic3"></div>
+    <div class="deansOffice">
+        <h3>Dean's Office</h3>
+    </div>
+    <div class="deansOffice2"></div>
+    <div class="faculty">
+        <h3>Faculty</h3>
+    </div>
+    <div class="faculty2"></div>
+    <div class="bookstore">
+        <h3>Bookstore</h3>
+    </div>
+    <div class="bookstore2">
+        </div>
+        <div class="library"> 
+            <h3>Library</h3>
+        </div>
+        <div class="library2"></div>
+    <div class="library3"></div>
+</div>
+<div name="3rdFloor" class="slidesDisp fade">
+    <map name="floor3">
+        <area target="" alt="310" title="310" onclick="showRoomDetails( 'room310')" coords="2,0,144,206" shape="rect">
+        <area target="" alt="309" title="309" onclick="showRoomDetails( 'room309')" coords="4,211,145,414" shape="rect">
+        <area target="" alt="308" title="308" onclick="showRoomDetails( 'room308')" coords="148,240,340,412" shape="rect">
+        <area target="" alt="302" title="302" onclick="showRoomDetails( 'room302')" coords="340,239,502,414" shape="rect">
+        <area target="" alt="303" title="303" onclick="showRoomDetails( 'room303')" coords="506,241,670,413" shape="rect">
+        <area target="" alt="304" title="304" onclick="showRoomDetails( 'room304')" coords="673,243,828,412" shape="rect">
+        <area target="" alt="305" title="305" onclick="showRoomDetails('room305')" coords="827,193,962,414" shape="rect">
+        <area target="" alt="306/Physics lab" title="306/Physics lab" onclick="showRoomDetails( 'room306')" coords="829,4,962,190" shape="rect">
+        <area target="" alt="Tourism" title="Tourism" onclick="miscOnclick( 'tourism')" coords="504,4,502,157,639,158,642,109,667,109,668,2" shape="poly">
+        <area target="" alt="301" title="301" onclick="showRoomDetails( 'room301')" coords="342,3,501,212" shape="rect">
+        <area target="" alt="307" title="307" onclick="showRoomDetails( 'room307')" coords="146,1,148,169,177,169,180,213,338,213,336,4" shape="poly">
+        <area target="" alt="Record Station" title="Record Station" onclick="miscOnclick( 'recordStation')" coords="670,2,671,54,718,56,742,76,824,78,824,2" shape="poly">
+    </map>
+        <img src="Floors/Floor3.png" usemap="#floor3">
+        <div class="room310">
+            <h3>Room 310</h3>
+        </div>
+        <div class="room309">
+            <h3>Room 309</h3>
+        </div>
+        <div class="room308">
+            <h3>Room 308</h3>
+        </div>
+        <div class="room302">
+            <h3>Room 302</h3>
+        </div>
+        <div class="room303">
+            <h3>Room 303</h3>
+        </div>
+        <div class="room304">
+            <h3>Room 304</h3>
+        </div>
+        <div class="room305">
+            <h3>Room 305</h3>
+        </div>
+        <div class="room306">
+            <h3>Room 306</h3>
+        </div>
+        <div class="room301">
+            <h3>Room 301</h3>
+        </div>
+        <div class="tourism">
+            <h3>Tourism Room</h3>
+        </div>
+        <div class="tourismPart2">
+        </div>
+        <div class="recordStation">
+            <h3>Record Station</h3>
+        </div>
+        <div class="room307">
+            <h3>Room 307</h3>
+        </div>
+        <div class="room307Part2"></div>
+    </div>
+<div id="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+<div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<div class="sectionSchedule" id="sectionSchedule">
+    <p>Select a section in the top-right corner of the screen.</p>
+</div>
+    <script src="scripts.js"></script>
+    <script>
+        imageMapResize();
+    </script>
+</body>
+</html> 
